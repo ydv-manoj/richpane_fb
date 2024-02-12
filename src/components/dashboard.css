@@ -1,0 +1,33 @@
+.dash{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dash p{
+    font-size: 20px;
+    
+}
+.dash span{
+    color: rgb(0, 200, 255);
+}
+.dash button{
+    padding: 5px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    background: white;
+}
+.up_images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.error{
+    color: red;
+}
