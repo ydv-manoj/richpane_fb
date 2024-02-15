@@ -5,20 +5,57 @@
   border: 1px solid #ddd;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: #fff;
+  border-radius: 20px;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .auth-form label {
   display: block;
-  margin: 30px auto;
+  margin-bottom: 20px;
 }
+
 .auth-form span {
   display: block;
   margin-bottom: 6px;
+  font-size: 18px;
 }
+
 .auth-form input {
-  padding: 8px 6px;
+  padding: 10px;
   font-size: 1em;
   color: #777;
-  width: 90%;
+  width: 100%; /* Changed width to 100% for better responsiveness */
+  box-sizing: border-box;
   margin: auto;
+  border: 1.5px solid grey;
+  border-radius: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(30, 77, 144);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px; /* Added margin for better spacing */
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.auth-form p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-form a {
+  color: rgb(30, 77, 144);
 }

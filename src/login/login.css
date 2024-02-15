@@ -1,42 +1,64 @@
 .login-form {
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: white;
-    
-  }
-  body{
-    background-color: white;
-  }
-  .login-form label {
-    display: block;
-    margin: 30px auto;
-  }
-  .login-form span {
-    display: block;
-    margin-bottom: 6px;
-  }
-  .login-form input {
-    padding: 8px 6px;
-    font-size: 1em;
-    color: #777;
-    width: 90%;
-    margin: auto;
-  }
-
-
-.login_but{
+  width: 25%;
+  margin: 60px auto;
+  padding: 30px; /* Adjusted padding for even right and left padding */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+  border-radius: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 50%;
-  margin: 10px auto auto auto;
-  background-size: cover;
 }
 
+.login-form h5 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
 
+body {
+  background-color: rgb(30, 77, 144);
+}
 
+.login-form label {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-  
+.login-form span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  border: 1.5px solid grey;
+  border-radius: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 0; /* Adjusted padding for even top and bottom padding */
+  background-color: rgb(30, 77, 144);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.acc {
+  text-align: center;
+  margin-top: 15px;
+}

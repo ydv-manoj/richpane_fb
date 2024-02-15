@@ -41,9 +41,14 @@ export const useLogin = () => {
     await projectAuth.signInWithPopup(provider);
   };
 
+  const signInWithFacebook = async () => {
+    const provider = new firebaseT.FacebookAuthProvider();
+    await projectAuth.signInWithPopup(provider);
+  };
+
   useEffect(() => {
     return () => setIsCancelled(true)
   }, [])
 
-  return { login, isPending, error,signInWithGoogle }
+  return { login, isPending, error,signInWithGoogle,signInWithFacebook }
 }

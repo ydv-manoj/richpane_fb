@@ -6,12 +6,13 @@ import 'firebase/compat/storage'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBj9rkBJax7UF4tx7sSzB5ZqU9LcNW5zW4",
-  authDomain: "blinkitchallenge.firebaseapp.com",
-  projectId: "blinkitchallenge",
-  storageBucket: "blinkitchallenge.appspot.com",
-  messagingSenderId: "1039691962872",
-  appId: "1:1039691962872:web:02230742f2f375ae259e0d"
+  apiKey: "AIzaSyD-YmEEjXAuuy_PyJHnAR_SZcCHC41ahsw",
+  authDomain: "richpanel-31982.firebaseapp.com",
+  projectId: "richpanel-31982",
+  storageBucket: "richpanel-31982.appspot.com",
+  messagingSenderId: "487499064848",
+  appId: "1:487499064848:web:3bd4aed1e7c57b48998c95",
+  measurementId: "G-D9L6RXKT7Z"
 };
 
 // Initialize Firebase

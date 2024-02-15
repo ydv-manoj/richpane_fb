@@ -31,7 +31,7 @@ export default function Signup() {
       })
 
       //routing to dashboard on successfull signup
-      history.push('/dashboard');
+      history.push('/fbconnect');
     }
     catch(error){
       console.error("Signup Error:", error);
@@ -42,9 +42,18 @@ export default function Signup() {
 
   return (
     <form onSubmit={handleSubmit} className="auth-form">
-      <h2>sign up</h2>
+      <h2>Create Account</h2>
       <label>
-        <span>email:</span>
+        <span>Name:</span>
+        <input
+          required
+          type="text" 
+          onChange={(e) => setDisplayName(e.target.value)} 
+          value={displayName}
+        />
+      </label>
+      <label>
+        <span>Email:</span>
         <input
           required 
           type="email" 
@@ -53,7 +62,7 @@ export default function Signup() {
         />
       </label>
       <label>
-        <span>password:</span>
+        <span>Password:</span>
         <input
           required
           type="password" 
@@ -61,16 +70,6 @@ export default function Signup() {
           value={password}
         />
       </label>
-      <label>
-        <span>display name:</span>
-        <input
-          required
-          type="text" 
-          onChange={(e) => setDisplayName(e.target.value)} 
-          value={displayName}
-        />
-      </label>
-     
       {!isPending && <button className="btn">Sign up</button>}
       <p>Already have an account? <a href="/">Login</a></p>
       {/* loading time */}
