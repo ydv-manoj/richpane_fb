@@ -22,7 +22,7 @@ export default function FBconnection() {
     <div>
         <div className='fb-int'>
             <p>Facebook page integration</p>
-            <button onClick={handleFacebook}>Connect Page</button>
+            <button style={{cursor:"pointer"}} onClick={handleFacebook}>Connect Page</button>
             {error && <p>{error}</p>}
         </div>
     </div>

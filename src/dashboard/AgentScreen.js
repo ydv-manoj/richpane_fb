@@ -49,7 +49,7 @@ const FBSampleData = [
         title: "Awesome product",
         message: "Hey there is it available.",
       },
-      profile: "https://material-ui.com/static/images/avatar/3.jpg",
+      profile: "https://material-ui.com/static/images/avatar/2.jpg",
       chats: [
         ["new message"],
         ["user answer", "second answer"],
@@ -60,21 +60,21 @@ const FBSampleData = [
 
 
 function AgentScreen() {
-  const [showInbox, setShowInbox] = useState(false);
+
   const {user}=useAuthContext();
   const [data] = useState(FBSampleData);
   const [selected, setSelected] = useState(FBSampleData[0]);
   const [profilePictureUrl, setProfilePictureUrl] = useState(null);
   const [id,setId]=useState(null);
 
-    fetch(`https://graph.facebook.com/me?fields=email&=${user.email}&access_token=EAAFQGmW12gwBOZBxrlZChBzBv2mFKEcnvhHv3xi9IjYkgCD5jOIxc9bZAwN7KwZBoDZBudRAOE3XsjTkZAZBpkcI03VCK0WglALtZCjfZAMist062FzcKkCedp6GQNWvQ1IIA58TgnTP9k10ajxiu2jU7VP5vvzrzvmFSlZCWs7zgtrPZA7huvMdOff1UmyT6UC80jbcWZBl6WfEkIfWqLd4xUFhgybnoLYZD`)
+    fetch(`https://graph.facebook.com/me?fields=email&=${user.email}&access_token=EAAPZA4dG7EtQBOyDrdvhxO6wjHMFZBoS5maOxQWpblHHukw481PDRnIoEi0q9Cdxwh1alzK8bQUejjZBPSoCx2XlTM78ziBuSpbq5f7CVKbP7wBOVtOpopQE7OTNGwyoapEdJzkxL2497GFUeu4QWz302GHBQUKCoeJR4mqZBuOzkxNeFiAvmPqC2Q05gAq2sXHYFSHgHgajjVT6lAZDZD`)
     .then((res) => res.json())
     .then((data) => setId(data.id));
 
     useEffect(() => {
         const fetchProfilePicture = async () => {
           try {
-            const response = await fetch(`https://graph.facebook.com/v13.0/${id}/picture?type=large&access_token=EAAFQGmW12gwBOZBxrlZChBzBv2mFKEcnvhHv3xi9IjYkgCD5jOIxc9bZAwN7KwZBoDZBudRAOE3XsjTkZAZBpkcI03VCK0WglALtZCjfZAMist062FzcKkCedp6GQNWvQ1IIA58TgnTP9k10ajxiu2jU7VP5vvzrzvmFSlZCWs7zgtrPZA7huvMdOff1UmyT6UC80jbcWZBl6WfEkIfWqLd4xUFhgybnoLYZD`);
+            const response = await fetch(`https://graph.facebook.com/v13.0/${id}/picture?type=large&access_token=EAAPZA4dG7EtQBOyDrdvhxO6wjHMFZBoS5maOxQWpblHHukw481PDRnIoEi0q9Cdxwh1alzK8bQUejjZBPSoCx2XlTM78ziBuSpbq5f7CVKbP7wBOVtOpopQE7OTNGwyoapEdJzkxL2497GFUeu4QWz302GHBQUKCoeJR4mqZBuOzkxNeFiAvmPqC2Q05gAq2sXHYFSHgHgajjVT6lAZDZD`);
             const data = await response.blob();
             const url = URL.createObjectURL(data);
             setProfilePictureUrl(url);
